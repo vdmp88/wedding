@@ -2943,7 +2943,7 @@ body {
           height: 100%;
           width: 100%;
           position: absolute;
-          background: url(../../img/menu.svg) right no-repeat;
+          background: url(../img/menu.svg) right no-repeat;
           background-size: contain; }
         .header .header__wrapper .navigation::after {
           content: "";
