@@ -2965,7 +2965,7 @@ body {
       @media only screen and (max-width: 991px) {
         .header .header__wrapper .navigation .navigation__list {
           padding-right: 14px; } }
-      @media only screen and (max-width: 991px) {
+      @media only screen and (max-width: 768px) {
         .header .header__wrapper .navigation .navigation__list {
           -webkit-box-orient: vertical;
           -webkit-box-direction: normal;
