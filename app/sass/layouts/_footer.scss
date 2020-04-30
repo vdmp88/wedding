@@ -1,0 +1,23 @@
+.footer {
+  background: #1f1f1f;
+  color: $white-color;
+  .footer__content {
+    height: 88px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .footer__logo {
+      img {
+        display: flex;
+        @include break(320) {
+          width: 80%;
+        }
+      }
+    }
+    .footer__copy {
+      @include break(320) {
+        font-size: 13px;
+      }
+    }
+  }
+}

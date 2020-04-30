@@ -1,0 +1,26 @@
+// utils
+@import "utils/_variable";
+@import "utils/mixins";
+
+// vendor
+@import "vendor/slick/slick.scss";
+@import "vendor/animate/animate.scss";
+
+// base
+@import "base/_reset";
+@import "base/_font";
+@import "base/_base";
+
+// layout
+@import "layouts/header";
+@import "layouts/footer";
+
+// components
+@import "components/buttons";
+@import "components/hamburger";
+@import "components/slider";
+
+// section
+@import "sections/dance-lesson";
+@import "sections/offer";
+@import "sections/coaches";

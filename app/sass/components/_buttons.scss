@@ -1,0 +1,61 @@
+.default-button {
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 600;
+  overflow: hidden;
+  transition: all 0.3s;
+  position: relative;
+  &.brand-btn {
+    border: 2px solid $brand-color;
+    color: $brand-color;
+    padding: 10px 40px;
+    &::before {
+      background: $brand-color;
+    }
+    &.brand-btn--mobile {
+      padding: 0;
+      height: 33px;
+      width: 33px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+      display: none;
+      @include break(991) {
+        display: flex;
+      }
+      &:hover::before {
+        height: 0%;
+      }
+    }
+  }
+  &.dark-btn {
+    border: 2px solid $black-color;
+    color: $black-color;
+    padding: 6px 32px;
+    &::before {
+      background: $black-color;
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    height: 0%;
+    left: 0;
+    right: 0;
+    transition: 0.4s ease-in-out;
+    z-index: -1;
+    top: 0;
+  }
+  &:hover {
+    color: $white-color;
+  }
+  &:hover::before {
+    height: 200%;
+  }
+}

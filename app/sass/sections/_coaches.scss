@@ -1,0 +1,64 @@
+.section--coach {
+  padding-bottom: 80px;
+}
+.slider.slider--coaches {
+  overflow: hidden;
+  .slick-slide {
+    margin: 0 8px 20px;
+  }
+  .slick-list {
+    margin: 0 -8px 20px;
+  }
+  .slider__card-outer {
+    width: 49%;
+    .slider__card-inner {
+      display: flex;
+      height: 100%;
+      @include break(991) {
+        flex-direction: column;
+      }
+      .slider__img {
+        display: flex;
+        max-width: 250px;
+        @include break(1200) {
+          max-width: 200px;
+        }
+        @include break(991) {
+          max-width: 100%;
+        }
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      .slider__desc {
+        padding: 40px 32px;
+        @include break(768) {
+          padding: 16px 16px 30px;
+        }
+        .slider__title {
+          padding: 8px 0;
+          @include break(991) {
+            padding: 8px 0 4px;
+          }
+          @include break(768) {
+            font-size: 18px;
+          }
+        }
+        .slider__list {
+          position: relative;
+          bottom: 0;
+          @include break(768) {
+            font-size: 13px;
+          }
+          li {
+            @include break(991) {
+              display: flex;
+              flex-direction: column;
+            }
+          }
+        }
+      }
+    }
+  }
+}

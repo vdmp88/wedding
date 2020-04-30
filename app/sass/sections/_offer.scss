@@ -1,0 +1,24 @@
+.list--offer {
+  justify-content: space-between;
+  .list__card {
+    width: 21%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 65px;
+    @include break(991) {
+      width: 50%;
+    }
+    .icon {
+      font-size: 60px;
+      display: flex;
+      justify-content: center;
+      color: $brand-color;
+    }
+    .list__text {
+      max-width: 185px;
+      padding-top: 5px;
+    }
+  }
+}

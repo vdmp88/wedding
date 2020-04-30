@@ -1,0 +1,123 @@
+.slider {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 48px;
+  .slick-track {
+    display: flex;
+  }
+  .slider__card-outer {
+    width: calc(33% - 16px);
+    display: flex;
+    height: auto;
+    @include break(768) {
+      margin-right: 16px;
+    }
+    .slider__card-inner {
+      width: 100%;
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      box-shadow: 0px 4px 30px rgba(207, 207, 207, 0.25);
+      border-radius: 2px;
+      height: 100%;
+      .slider__img {
+        display: flex;
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+      .slider__desc {
+        padding: 40px 24px;
+        position: relative;
+        .slider__card-id {
+          line-height: 25px;
+          font-weight: 700;
+          @include break(768) {
+            font-size: 12px;
+          }
+        }
+        .slider__title {
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 23px;
+          padding-bottom: 24px;
+        }
+        .slider_subtitle {
+          line-height: 25px;
+          padding-bottom: 24px;
+          @include break(991) {
+            padding-bottom: 16px;
+          }
+          @include break(768) {
+            font-size: 13px;
+          }
+        }
+        .slider__list {
+          line-height: 25px;
+          .mark-text {
+            opacity: 0.5;
+            margin-right: 8px;
+          }
+          li + li {
+            margin-top: 8px;
+          }
+        }
+        .slider__btn {
+          padding-top: 50px;
+          @include break(991) {
+            padding-top: 0;
+          }
+          .default-button:first-child {
+            @include break(991) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .slick-dots {
+    display: flex;
+    padding-top: 12px;
+    justify-content: center;
+    width: 100%;
+    li {
+      border-radius: 50%;
+      width: 6px;
+      height: 6px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      & + li {
+        margin-left: 4px;
+      }
+      &.slick-active {
+        background: $brand-color;
+      }
+      button {
+        display: none;
+      }
+    }
+  }
+}
+
+.slider-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include break(768) {
+    display: none;
+  }
+  .slider-navigation__prev-arrow,
+  .slider-navigation__next-arrow {
+    display: flex;
+    cursor: pointer;
+    svg {
+      stroke: $black-color;
+      &:hover {
+        opacity: 0.3;
+      }
+    }
+  }
+  .slider-navigation__counter {
+    padding: 0 20px;
+  }
+}

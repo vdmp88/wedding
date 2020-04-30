@@ -1,0 +1,128 @@
+.header {
+  .header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    .logo {
+      a {
+        display: flex;
+      }
+    }
+    .navigation {
+      display: flex;
+      align-items: center;
+      position: relative;
+      @media (min-width: 768px) {
+        display: flex;
+      }
+      @include break(768) {
+        display: none;
+        position: absolute;
+        background: $white-color;
+        top: 0;
+        width: 100%;
+        left: 0;
+        height: 100%;
+        z-index: 20;
+        display: flex;
+        flex-direction: column;
+        transform: translateY(-100%);
+        transition: 0.5s all cubic-bezier(0.53, -0.1, 0.21, 1.21);
+        &.active-nav {
+          transform: translateY(0%);
+        }
+        &::before {
+          content: "";
+          height: 100%;
+          width: 100%;
+          position: absolute;
+          background: url(../../img/menu.svg) right no-repeat;
+          background-size: contain;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          height: 4px;
+          background: $brand-color;
+          width: 100%;
+          bottom: 0;
+        }
+      }
+      .navigation__list {
+        font-family: $secondary-font;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        line-height: 16px;
+        @include break(991) {
+          padding-right: 14px;
+        }
+        @include break(991) {
+          flex-direction: column;
+          align-items: flex-start;
+          line-height: 1.4;
+          width: 100%;
+          font-size: 36px;
+          height: 70%;
+          padding-top: 40px;
+          padding-right: 0;
+        }
+        @include break(480) {
+          padding-top: 0;
+        }
+        .navigation__title {
+          display: none;
+          @include break(768) {
+            display: block;
+          }
+        }
+        li {
+          position: relative;
+          display: flex;
+          @include break(768) {
+            font-family: $primary-font;
+            font-weight: 700;
+            font-size: 24px;
+          }
+          &:first-child {
+            font-size: 36px;
+          }
+          &:last-child,
+          &:first-child {
+            @include break(768) {
+              margin: 28px 24px;
+            }
+            &:hover::before {
+              width: 0;
+            }
+          }
+          & + li {
+            margin-left: 24px;
+            @include break(991) {
+              margin-left: 14px;
+            }
+            @include break(768) {
+              margin: 20px 24px;
+            }
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            height: 1px;
+            width: 0%;
+            background: #000;
+            transition: all 0.5s;
+            bottom: -3px;
+          }
+          &:nth-child(even)::before {
+            right: 0;
+          }
+          &:hover::before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
