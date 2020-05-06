@@ -38,6 +38,9 @@ body {
   line-height: 1.2;
   font-size: 16px;
   font-family: $primary-font;
+  @include break(768) {
+    font-size: 13px;
+  }
 }
 
 .overflow-h {
@@ -46,12 +49,18 @@ body {
 
 .section {
   padding-top: 100px;
+  @include break(768) {
+    padding-top: 60px;
+  }
 }
 
 .section__title {
   font-weight: 700;
   font-size: 36px;
-  line-height: 34px;
+  line-height: 1.1;
+  @include break(768) {
+    font-size: 24px;
+  }
 }
 
 .section__text {
@@ -59,6 +68,10 @@ body {
   padding-top: 24px;
   line-height: 25px;
   width: 100%;
+  @include break(768) {
+    font-size: 13px;
+    padding-top: 12px;
+  }
 }
 
 .list {

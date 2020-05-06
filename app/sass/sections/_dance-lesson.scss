@@ -2,27 +2,31 @@
   padding-top: 17px;
   .section__content {
     display: flex;
-    @media (max-width: 768px) {
+    @include break(768) {
       flex-direction: column-reverse;
     }
     .section__wrapper--lesson-desc {
       padding-right: 75px;
       max-width: 385px;
       padding-bottom: 80px;
-      @media (max-width: 1200px) {
+      @include break(1200) {
         padding-right: 50px;
         padding-bottom: 50px;
+      }
+      @include break(768) {
+        max-width: 100%;
+        padding-bottom: 0;
       }
       .section__title {
         margin-top: 75px;
         font-size: 72px;
         font-weight: 700;
         line-height: 68px;
-        @media (max-width: 1200px) {
+        @include break(1200) {
           font-size: 45px;
           line-height: 1.3;
         }
-        @media (max-width: 768px) {
+        @include break(768) {
           margin-top: 35px;
           font-size: 36px;
           line-height: 1.2;
@@ -34,7 +38,7 @@
         font-weight: 500;
         font-size: 24px;
         line-height: 29px;
-        @media (max-width: 1200px) {
+        @include break(1200) {
           font-size: 20px;
         }
         @include break(768) {

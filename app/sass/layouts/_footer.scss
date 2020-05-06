@@ -10,7 +10,7 @@
       img {
         display: flex;
         @include break(320) {
-          width: 80%;
+          width: 90%;
         }
       }
     }

@@ -80,7 +80,7 @@ gulp.task("iconfont", async () => {
         // где будет наш scss файл
         targetPath: "../sass/base/_font.scss",
         // пути подлючения шрифтов см. в _icons.scss
-        fontPath: "../iconfonts/",
+        fontPath: "../../iconfonts/",
         fontName: fontName,
       })
     )

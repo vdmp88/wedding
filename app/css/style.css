@@ -2789,8 +2789,8 @@ table {
 
 @font-face {
   font-family: "icons";
-  src: url("../iconfonts/icons.eot");
-  src: url("../iconfonts/icons.eot?#iefix") format("eot"), url("../iconfonts/icons.woff2") format("woff2"), url("../iconfonts/icons.woff") format("woff"), url("../iconfonts/icons.ttf") format("truetype"), url("../iconfonts/icons.svg#icons") format("svg"); }
+  src: url("../../iconfonts/icons.eot");
+  src: url("../../iconfonts/icons.eot?#iefix") format("eot"), url("../../iconfonts/icons.woff2") format("woff2"), url("../../iconfonts/icons.woff") format("woff"), url("../../iconfonts/icons.ttf") format("truetype"), url("../../iconfonts/icons.svg#icons") format("svg"); }
 
 .icon:before {
   font-family: "icons";
@@ -2861,23 +2861,36 @@ body {
   line-height: 1.2;
   font-size: 16px;
   font-family: "Montserrat", sans-serif; }
+  @media only screen and (max-width: 768px) {
+    body {
+      font-size: 13px; } }
 
 .overflow-h {
   overflow: hidden; }
 
 .section {
   padding-top: 100px; }
+  @media only screen and (max-width: 768px) {
+    .section {
+      padding-top: 60px; } }
 
 .section__title {
   font-weight: 700;
   font-size: 36px;
-  line-height: 34px; }
+  line-height: 1.1; }
+  @media only screen and (max-width: 768px) {
+    .section__title {
+      font-size: 24px; } }
 
 .section__text {
   max-width: 670px;
   padding-top: 24px;
   line-height: 25px;
   width: 100%; }
+  @media only screen and (max-width: 768px) {
+    .section__text {
+      font-size: 13px;
+      padding-top: 12px; } }
 
 .list {
   display: -webkit-box;
@@ -2943,7 +2956,7 @@ body {
           height: 100%;
           width: 100%;
           position: absolute;
-          background: url(../img/menu.svg) right no-repeat;
+          background: url(../../img/menu.svg) right no-repeat;
           background-size: contain; }
         .header .header__wrapper .navigation::after {
           content: "";
@@ -3047,7 +3060,7 @@ body {
       display: flex; }
       @media only screen and (max-width: 320px) {
         .footer .footer__content .footer__logo img {
-          width: 80%; } }
+          width: 90%; } }
     @media only screen and (max-width: 320px) {
       .footer .footer__content .footer__copy {
         font-size: 13px; } }
@@ -3358,7 +3371,7 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
-    @media (max-width: 768px) {
+    @media only screen and (max-width: 768px) {
       .section--lesson .section__content {
         -webkit-box-orient: vertical;
         -webkit-box-direction: reverse;
@@ -3368,20 +3381,24 @@ body {
       padding-right: 75px;
       max-width: 385px;
       padding-bottom: 80px; }
-      @media (max-width: 1200px) {
+      @media only screen and (max-width: 1200px) {
         .section--lesson .section__content .section__wrapper--lesson-desc {
           padding-right: 50px;
           padding-bottom: 50px; } }
+      @media only screen and (max-width: 768px) {
+        .section--lesson .section__content .section__wrapper--lesson-desc {
+          max-width: 100%;
+          padding-bottom: 0; } }
       .section--lesson .section__content .section__wrapper--lesson-desc .section__title {
         margin-top: 75px;
         font-size: 72px;
         font-weight: 700;
         line-height: 68px; }
-        @media (max-width: 1200px) {
+        @media only screen and (max-width: 1200px) {
           .section--lesson .section__content .section__wrapper--lesson-desc .section__title {
             font-size: 45px;
             line-height: 1.3; } }
-        @media (max-width: 768px) {
+        @media only screen and (max-width: 768px) {
           .section--lesson .section__content .section__wrapper--lesson-desc .section__title {
             margin-top: 35px;
             font-size: 36px;
@@ -3392,7 +3409,7 @@ body {
         font-weight: 500;
         font-size: 24px;
         line-height: 29px; }
-        @media (max-width: 1200px) {
+        @media only screen and (max-width: 1200px) {
           .section--lesson .section__content .section__wrapper--lesson-desc .section__subtitle {
             font-size: 20px; } }
         @media only screen and (max-width: 768px) {
